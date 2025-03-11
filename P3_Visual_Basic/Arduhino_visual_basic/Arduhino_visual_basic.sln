@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arduhino_visual_basic", "Arduhino_visual_basic.vbproj", "{9EE93558-16A5-4EB5-9922-DB46E01FFE05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE93558-16A5-4EB5-9922-DB46E01FFE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE93558-16A5-4EB5-9922-DB46E01FFE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE93558-16A5-4EB5-9922-DB46E01FFE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE93558-16A5-4EB5-9922-DB46E01FFE05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB177FB0-C68D-4270-80EA-0AE2E9D0DD34}
+	EndGlobalSection
+EndGlobal
