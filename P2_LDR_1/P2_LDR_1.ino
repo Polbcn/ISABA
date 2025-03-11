@@ -1,3 +1,9 @@
+/*
+  ISABA - 2025
+  German Bueno y Pol Pavo
+  T12 - Encarna Garcia
+
+*/
 #define LED1 3
 #define LED2 4
 #define LED3 5

@@ -1,8 +1,9 @@
-/***********************************************************************************************
- PROGRAMACIÓN SENSOR DE DISTANCIA HC-SR04
+/*
+  ISABA - 2025
+  German Bueno y Pol Pavo
+  T12 - Encarna Garcia
 
-Encarna Garcia                  Enero 2019
- **********************************************************************************************/
+*/
 
 const int EchoPin = 5;                      
 const int TriggerPin = 6;

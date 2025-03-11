@@ -1,3 +1,9 @@
+/*
+  ISABA - 2025
+  German Bueno y Pol Pavo
+  T12 - Encarna Garcia
+
+*/
 float temperatura;
 int tempPin = 1;
 int T = 0;
