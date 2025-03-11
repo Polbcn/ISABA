@@ -13,10 +13,10 @@ float h = dht.readHumidity();
 float t = dht.readTemperature(); 
 
 //Serial.print("Humedad: ");
-Serial.print(h);
-Serial.print(" %  ");
-//Serial.print("Temperatura: ");
 Serial.print(t);
+//Serial.print(" %  ");
+Serial.print(" ");
+Serial.print(h);
 Serial.println (" oC");
 delay(2000); 
 }

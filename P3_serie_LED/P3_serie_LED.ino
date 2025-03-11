@@ -1,4 +1,4 @@
-int LED1 = 13;
+int LED1 = 2;
 int LED2 = 3;
 int LED3 = 4;
 int data;
