@@ -3,6 +3,11 @@
 
     Encarna García                                                    Septiembre 2024
 ************************************************************************************"""
+"""
+P Opcional
+German Bueno, Pol Pavo
+ISABA 2025
+"""
 from machine import Pin
 import network
 import socket
@@ -42,14 +47,14 @@ def web_page():
     estado_LED2="Apagado"
   if led3.value()==0:
     estado_LED3="Apagado"
-  
+
   html = """<html>
 
     <head>
         <title> ESP32 LED Web Server </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="data:,">
-        
+
         <style>
             html{
                 font-family: Helvetica;
@@ -57,16 +62,16 @@ def web_page():
                 margin: 0px auto;
                 text-align: center;
             }
-        
+
             h1{
                 color: #0F3376;
                 padding: 2vh;
                 }
-            
+
             p{
             font-size: 1.5rem;
             }
-        
+
             .button{
                 display: inline-block;
                 background-color: #EC7063;
@@ -79,22 +84,22 @@ def web_page():
                 margin: 2px;
                 cursor: pointer;
             }
-        
+
            .button_OFF{
                background-color: #4286f4;
             }
-        
+
         </style>
-    
+
     </head>
-  
+
     <body>
-        <h1> Control encendido LED </h1> 
+        <h1> Control encendido LED </h1>
         <p>Estado del LED: <strong>""" + estado_LED + """</strong>
         <p>Estado del LED 2: <strong>""" + estado_LED2 + """</strong>
         <p>Estado del LED 3: <strong>""" + estado_LED3 + """</strong>
         </p>
-        
+
         <p>
             <a href="/1">
             <button class="button"> LED 1 </button>
@@ -110,7 +115,7 @@ def web_page():
             <button class="button"> LED 3 </button>
             </a>
         </p>
-        
+
         <p> <a href="/off">
         <button class="button button_OFF">DESACTIVAR</button>
             </a>
@@ -130,13 +135,13 @@ while True:
   request = conn.recv(1024)
   request = str(request)
   print('Content = %s' % request)
-  
-  
+
+
   led_on = request.find('/1')   # mensaje que se envía al clicar cada botón
   led_on2 = request.find('/2')
   led_on3 = request.find('/3')
   led_off = request.find('/off')
-  
+
   if led_on == 6:
     print('LED ON')
     led.value(1)
@@ -151,14 +156,14 @@ while True:
     led.value(0)
     led2.value(0)
     led3.value(0)
-    
+
   response = web_page()
   conn.send('HTTP/1.1 200 OK\n')
   conn.send('Content-Type: text/html\n')
   conn.send('Connection: close\n\n')
   conn.sendall(response)
   conn.close()
-  
+
 # https://randomnerdtutorials.com/esp32-esp8266-micropython-web-server/
 # https://todomaker.com/blog/montar-un-servidor-web-en-el-esp32-con-espasyncwebserver-y-spiffs/
 # https://www.youtube.com/watch?v=kep8hVQMN6o&t=263s

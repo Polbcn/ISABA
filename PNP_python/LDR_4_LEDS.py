@@ -1,6 +1,9 @@
-#################Pol Pavo, German Bueno################################
+"""
+P Opcional
+German Bueno, Pol Pavo
+ISABA 2025
+"""
 
-#####################P7(NP), Micropython, ISABA########################
 
 from machine import Pin, ADC
 from time import sleep
@@ -15,7 +18,7 @@ while True:
     lectura = int(LDR.read())
     print(lectura)
     sleep(0.1)
-    
+
     if lectura <= 1024:
         print("LOW")
         LED_LOW.on()
@@ -34,6 +37,3 @@ while True:
         LED_LOW.off()
         LED_MID.off()
         LED_HIGH.off()
-        
-       
-        

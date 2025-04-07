@@ -4,7 +4,11 @@
 
     Encarna García                                                    Septiembre 2024
 ************************************************************************************"""
-
+"""
+P Opcional
+German Bueno, Pol Pavo
+ISABA 2025
+"""
 #https://lastminuteengineers.com/esp32-dht11-dht22-web-server-tutorial/#google_vignette
 #https://randomnerdtutorials.com/micropython-esp32-esp8266-dht11-dht22-web-server/
 # problema= para actualizar valores es necesario refrescar web
@@ -50,7 +54,7 @@ def read_sensor():
 
       # uncomment for Fahrenheit
       #temp = temp * (9/5) + 32.0
-   
+
   return(msg)
 
 # Función que permite programar la página web en html
@@ -81,25 +85,25 @@ def web_page():
 <body>
   <h2>ESP DHT Server</h2>
   <p>
-    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
-    <span class="dht-labels">Temperature</span> 
+    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i>
+    <span class="dht-labels">Temperature</span>
     <span>"""+str(temp)+"""</span>
     <sup class="units">&deg;C</sup>
   </p>
   <p>
-    <i class="fas fa-tint" style="color:#00add6;"></i> 
+    <i class="fas fa-tint" style="color:#00add6;"></i>
     <span class="dht-labels">Humidity</span>
     <span>"""+str(hum)+"""</span>
     <sup class="units">%</sup>
   </p>
   <p>
-    <i class="fas fa-lightbulb" style="color:#00add6;"></i> 
+    <i class="fas fa-lightbulb" style="color:#00add6;"></i>
     <span class="dht-labels">LDR</span>
     <span>"""+str(ldr)+"""</span>
     <sup class="units">%</sup>
   </p>
   <p>
-    <i class="fas fa-broadcast-tower" style="color:#00add6;"></i> 
+    <i class="fas fa-broadcast-tower" style="color:#00add6;"></i>
     <span class="dht-labels">Presion</span>
     <span>"""+str(prem)+"""</span>
     <sup class="units">\</sup>
@@ -117,11 +121,11 @@ while True:
   print('Got a connection from %s' % str(addr))
   request = conn.recv(1024)
   print('Content = %s' % str(request))
-   
+
   sensor_readings = read_sensor()
   print(sensor_readings)
   response = web_page()
- 
+
   conn.send('HTTP/1.1 200 OK\n')
   conn.send('Content-Type: text/html\n')
   conn.send('Connection: close\n\n')
